@@ -55,3 +55,102 @@ Test case 3: The total size of files is 3+2⋅2=7, which is greater than the rem
 
 Test case 4: The total size of files is 1+2⋅2=5, which is equal to the remaining space on the computer. Thus Chef will be able to save all the files.
 
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    
+    while (t--) {
+        int N, X, Y;
+        cin >> N >> X >> Y;
+        
+        if (N >= (X + 2 * Y)) 
+            cout << "YES" << endl;
+        
+        else 
+            cout << "NO" << endl;
+        
+    }
+    
+    return 0;
+}
+
+
+# 2. Volume Comparison
+
+
+
+Alice has two objects:
+
+A cuboid with length A units, height B units, and width C units.
+A cube with an edge length of X units.
+Alice wants to know which of the two objects has a larger volume, or if their volumes are equal.
+
+Input Format
+
+The first and only line of input will contain four space-separated integers A, B, C and X, the length of the cuboid, the width of the cuboid, the height of the cuboid, and the length of the edge of the cube.
+
+
+Output Format
+
+Print a single line containing the string:
+
+"Cuboid", if the volume of the cuboid is greater than the volume of the cube.
+"Cube", if the volume of the cube is greater than the volume of the cuboid.
+"Equal", if both objects have equal volume.
+Print the string without quotes.
+You can print each character of the output in either uppercase or lowercase.
+For example, the strings Cube, CUBE, cube, and CuBe are considered identical.
+
+Constraints
+
+1≤A,B,C,X≤10
+
+Sample 1:
+
+Input
+Output
+1 3 10 3
+Cuboid
+
+Explanation:
+
+The volume of the cuboid is 1×3×10=30 cubic units.
+
+The volume of the cube is 3^3 =27 cubic units.
+
+The cuboid has larger volume.
+
+Sample 2:
+Input
+Output
+1 1 1 2
+Cube
+
+Explanation:
+
+The volume of the cuboid is 1×1×1=1 cubic units.
+
+The volume of the cube is 2^3 =8 cubic units.
+
+The cube has larger volume.
+
+Sample 3:
+Input
+Output
+8 4 2 4
+
+Equal
+
+Explanation:
+
+The volume of the cuboid is 8×4×2=64 cubic units.
+
+The volume of the cube is 4^3 =64 cubic units.
+Both objects have the same volume.
+
