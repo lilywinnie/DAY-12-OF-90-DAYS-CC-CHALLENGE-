@@ -114,8 +114,12 @@ Constraints
 Sample 1:
 
 Input
-Output
+
 1 3 10 3
+
+
+Output
+
 Cuboid
 
 Explanation:
@@ -127,9 +131,13 @@ The volume of the cube is 3^3 =27 cubic units.
 The cuboid has larger volume.
 
 Sample 2:
+
 Input
-Output
+
 1 1 1 2
+
+Output
+
 Cube
 
 Explanation:
@@ -141,9 +149,12 @@ The volume of the cube is 2^3 =8 cubic units.
 The cube has larger volume.
 
 Sample 3:
+
 Input
-Output
+
 8 4 2 4
+
+Output
 
 Equal
 
@@ -154,3 +165,33 @@ The volume of the cuboid is 8×4×2=64 cubic units.
 The volume of the cube is 4^3 =64 cubic units.
 Both objects have the same volume.
 
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int A, B, C, X;
+ 
+    cin >> A >> B >> C >> X;
+    
+    
+    int v_cuboid = A * B * C;
+    int v_cube = X * X * X;
+
+
+    if (v_cuboid > v_cube) 
+        cout << "Cuboid" << endl;
+    
+    else if (v_cube > v_cuboid) 
+        cout << "Cube" << endl;
+     
+    else 
+        cout << "Equal" << endl;
+    
+    
+    return 0;
+}
+
+
+# 3. 
